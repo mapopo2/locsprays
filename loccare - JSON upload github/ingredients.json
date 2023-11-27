@@ -1,0 +1,87 @@
+[ 
+    
+ {  "id": "1",
+    "type": "locSpray",
+    "name": "Rosewater Spray",
+    "contents": {
+
+        "oils": { "name": "vegetable glycerine",
+        "quantity": "5-8 drops"},
+
+        "optional":  {
+            "name": "jojoba, coconut, rosemary and almond oil"
+        },
+
+        "liquid": [ 
+        {"name": "rosewater",
+        "quantity": "fill container"}
+        ]
+
+        
+        
+    }
+    },
+    
+ {  "id": "2",
+    "type": "locSpray",
+    "name": "Aloe Vera Spray",
+    "contents": { 
+
+        "oils": { "name": "vegetable glycerine",
+        "quantity": "5-8 drops"},
+
+        "optional":  {
+            "name": "jojoba, coconut, rosemary and almond oil"
+        },
+
+        "liquid": [ {
+        "name": "aloe vera juice",
+        "quantity": "1 part"
+        },
+
+        {
+        "name": "rosewater",
+        "quantity": "3 parts"
+        }
+            ]
+        
+        }
+    },
+
+ {  "id": "3",
+    "type": "locSpray",
+    "name": "Herb Spray",
+    "contents": {
+
+        "oils": { "name": "vegetable glycerine",
+        "quantity": "5-8 drops"},
+
+        "optional":  {
+            "name": "jojoba, coconut, rosemary and almond oil"
+        },
+        
+        "liquid": [{
+        "name": "clove water",
+        "quantity": "1 part"
+        },
+
+        {
+        "name": "rosemary water",
+        "quantity": "1 part"
+        },
+
+        {
+        "name": "aloe vera juice",
+        "quantity": "1 part"
+        },
+
+        {
+        "name": "rosewater", 
+        "quantity": "3 parts"
+        }
+            ]
+        }
+    }
+
+]
+

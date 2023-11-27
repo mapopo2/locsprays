@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <-<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>🧴 Loc Sprays</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="/styles/styles.css">
+        <!-- can also add type="text/css" to stylesheet -->
+         <!-- icons -->
+        <script src="https://kit.fontawesome.com/64e8faaeab.js" crossorigin="anonymous"></script>
+
+    </head>
+
+    <body>
+        <h1> Loc Spray Recipes </h1>
+
+        <form action="/contents" method="POST" class="buttons">
+            <button type="submit" value="rosewater" name="choice">
+              <p class="caption">Rosewater</p>🌹
+            </button>
+            <button type="submit" value="aloe" name="choice">
+              <p class="caption">Aloe Vera</p>🍃
+            </button>
+            <button type="submit" value="herbs" name="choice">
+              <p class="caption">Herbs</p>🌿
+            </button>
+          </form>
+
+        <div id = "home_content">
+            <% if(locals.ingredients){ %>
+              
+                  <%= ingredients.name %>
+                </h2> 
+          
+               <h3>Contents:</h3>
+              <ul id = "ingredientsList">
+          
+            
+                <% ingredients.contents.liquid.forEach(liquids => { %>
+                <li> 
+                    <%= liquids.quantity %> of <%= liquids.name %>
+                  </li>
+                  <% }) %>
+                <li> 
+                  <%= ingredients.contents.oils.quantity %> of
+                  <%= ingredients.contents.oils.name %> 
+                  
+                  </li>
+
+                  <li class="options"> 
+                    Some optional oils are <%= ingredients.contents.optional.name %> 
+                    </li>
+                
+              </ul>
+              
+              <% } else { %>
+              <div id = "homeTitle">
+              <h2 class = "pick" >Pick your favourite loc spray ingredient 👆</h2>  
+              </div>
+              <% }; %>
+              
+             
+        </div>
+         <div id="footer"> 
+          <% if (locals.currentYear) { %>
+          <p> © Mapopo2 <%= currentYear %>
+            <a href="https://github.com/mapopo2"><i class="fa-brands fa-github fa-xl fa-bounce github"></i></a></p>
+          <%} %>
+        </div>
+
+
+
+        <!-- <script src="" async defer></script> -->
+    </body>
+</html>
